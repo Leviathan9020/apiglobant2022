@@ -1,0 +1,16 @@
+{
+  "name": "servidor",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "clase globant",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jomar restrepo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
