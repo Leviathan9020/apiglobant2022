@@ -12,21 +12,28 @@ export class Servidor {
 
     constructor(){
         //ATRIBUTO APP donde almaceno la funcionalidad de express        
-        this.app = express()
-        this.atenderServicios()
+        this.app = express()        
+        this.llamarAuxiliares()
+        this.atenderServicios()  
+        
+        
     }
 
     encenderServidor(){       
-        this.app.use('/',rutas)
+        this.app.listen(process.env.PORT,function(){
+            console.log(`Servidor encendido en ${process.env.PORT}`)
+        })
     }
 
     atenderServicios(){
-        this.app.get('/', function (req, res) {
-            res.send('Hello World')
-          })
-
+        this.app.use('/',rutas)
 
     }
 
     conectarconBd(){}
+
+    llamarAuxiliares(){
+        //ACTIVO LA RECEPCIÓN DE DATOS POR EL BODY DE LA PETICION
+        this.app.use(express.json())
+    }
 }
