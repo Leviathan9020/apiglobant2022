@@ -19,7 +19,7 @@ let controladorHabitacion = new ControladorHabitacion()
   rutas.delete('/apijomar/v1/habitaciones/:id/',controladorHabitacion.eliminar)
 
 
-//RUTAS PARA LOS SERVICIOS DE RESERVA
+
 
 //RUTAS PARA LOS SERVICIOS DE RESERVAS
 //1.Servicio Agregar reserva
