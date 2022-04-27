@@ -11,6 +11,22 @@ class ServicioReserva{
     }
 
     async buscarPorId(id){
-        
+        let reservacion=await modeloHabitacion.findById(id)
+        return reservacion
     }
+
+    async registra(habitacion){
+        let reservacionNueva=new modeloHabitacion(habitacion)
+        return await reservacionNueva.save()
+    }
+
+    async editar(id,habitacion){
+
+        return await modeloReserva.findByIdAndUpdate(id,habitacion)
+    }
+
+    async eliminar(id){
+        return await modeloHabitacion.findOneAndDelete(id)
+    }
+
 }
