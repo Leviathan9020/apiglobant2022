@@ -1,7 +1,7 @@
 //importo el modelo reserva 
 import {modeloReserva} from '../models/reservaModelo.js'
 
-class ServicioReserva{
+export class ServicioReserva{
     
     constructor(){}
 

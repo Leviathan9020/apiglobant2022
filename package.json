@@ -1,5 +1,6 @@
 {
   "name": "servidor",
+  "start":"app.js",
   "type": "module",
   "version": "1.0.0",
   "description": "clase globant",
@@ -10,6 +11,7 @@
   "author": "jomar restrepo",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.3.1"
